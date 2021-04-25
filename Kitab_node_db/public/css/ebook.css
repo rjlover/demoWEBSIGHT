@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Marcellus SC", serif;
+  font-weight: bold;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("/image/eimage/nav.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  position: relative;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 60px 0 60px;
+}
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 10px 0 10px;
+}
+nav li span {
+  padding-left: 5px;
+}
+li a {
+  color: aliceblue;
+  text-decoration: none;
+  padding: 5px;
+  background-color: rgba(68, 68, 68, 0.541);
+}
+li a:visited {
+  text-decoration: none;
+}
+li a:hover {
+  background-color: wheat;
+  color: black;
+  cursor: pointer;
+}
+
+.logo ion-icon {
+  vertical-align: bottom;
+  font-size: 20px;
+  padding-right: 5px;
+  color: burlywood;
+}
+.cart a {
+  background-color: rgba(68, 68, 68, 0.541);
+  color: white;
+  cursor: pointer;
+}
+/* added by RP */
+#ebooksec {
+  color: wheat;
+  border-bottom: #f33758;
+}
+.container {
+  display: flex;
+  background: linear-gradient(#d66d75, #e29587);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  padding-bottom: 100px;
+}
+.image {
+  margin: 20px 20px 0 20px;
+  position: relative;
+  overflow: hidden;
+  /* border: 2px solid red; */
+  border-radius: 7px;
+  height: 285px;
+  width: 200px;
+  text-align: center;
+  background-color: rgb(192, 188, 188);
+}
+.image img {
+  height: 200px;
+  width: 157px;
+}
+.add-cart {
+  position: relative;
+  /* width: 100%; */
+  display: block;
+  background-color: lightgreen;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.image:hover .add-cart {
+  opacity: 1;
+  /* bottom: 50px; */
+  padding: 10px;
+}
+
+/*..................FINAL CART.................*/
+.product-container {
+  background-color: lightgrey;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.product-header {
+  border-bottom: 3px solid rgb(53, 50, 50);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.product-title {
+  width: 45%;
+}
+.price {
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+.quantity {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.total {
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.product {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.product img {
+  width: 75px;
+}
+.baskettotalcontainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 3px solid grey;
+}
+.baskettotaltitle {
+  position: relative;
+  right: 10px;
+}
+.pay-btn {
+  background-color: rgb(248, 70, 70);
+  width: 100px;
+  margin: 5px;
+  padding: 3px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pay-btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: unset;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@meme@@@@@@@@@@@@@@@@@*/
+.meme {
+  display: block;
+  opacity: 0;
+  width: 100vw;
+  margin-top: 20px;
+  position: relative;
+}
+.meme img {
+  width: 900px;
+  height: 300px;
+  border: 4px solid grey;
+}
+.meme a {
+  text-decoration: none;
+  color: rgb(44, 4, 4);
+  font-size: 20px;
+  font-family: unset;
+}
+.pay-btn1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid black;
+  background-color: #ea5d5d;
+  cursor: pointer;
+}
+
+/*##################MAIN CONTAINER######################*/
+#main-container {
+  height: 70vh;
+  background-image: linear-gradient(45deg, #f7dfdf85, transparent),
+    url("/image/eimage/mainback.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: 3px;
+}
+.first-view {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+.book {
+  width: 100px;
+  position: relative;
+  top: 132px;
+}
+.main-text {
+  max-width: 560px;
+  margin-top: 145px;
+}
+.main-text h1 {
+  font-size: 23px;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+.line-color {
+  width: 556px;
+  height: 4px;
+  display: inline-block;
+  background-color: #f33758;
+  border-radius: 10px;
+}
+.main-text p {
+  font-size: 15px;
+  line-height: 18px;
+  color: #777;
+}
+.main-btn {
+  padding: 18px 14px;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgb(197 36 63);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.main-text button {
+  margin-top: 26px;
+  margin-bottom: 60px;
+}
+.read {
+  border: 2px solid palevioletred;
+  margin: 10px 20px;
+  background-color: #ded2f4;
+  border-radius: 6px;
+  display: none;
+}
+.read p {
+  font-size: 20px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  padding: 53px;
+  padding-bottom: 22px;
+}
+.read a {
+  position: relative;
+  left: 50%;
+  font-size: 33px;
+}

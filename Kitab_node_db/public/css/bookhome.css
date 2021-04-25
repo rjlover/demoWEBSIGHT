@@ -1,0 +1,638 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box */
+}
+
+/* CSS VARIABLES */
+:root {
+}
+
+/* UTILITY CLASS */
+.primary {
+  padding: 5px;
+  text-align: center;
+  font-family: "Baloo Bhaina 2", cursive;
+  color: White;
+  background: transparent;
+  text-shadow: 0 3px 4px black;
+  font-size: 45px;
+  font-weight: bold;
+}
+.secondary {
+  font-size: 1.4rem;
+  padding: 10px;
+  text-align: center;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+/* NAVIGATION BAR */
+#navber {
+  display: flex;
+  align-items: center;
+  position: relative; /* (to avoid overlapping of background color[ #navber::before] ) */
+  top: 0px;
+  background-color: #1312127a;
+}
+
+/* LOGO and IMAGE */
+#logo {
+  margin: 7px 27px;
+}
+#logo img {
+  margin: 4px 3px;
+  width: 114px;
+  height: 64px;
+  /*filter: invert(100);*/
+}
+
+/* LIST STYLE */
+#navber ul {
+  display: flex;
+}
+#navber ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+#navber ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 3px 20px;
+  border-radius: 8px;
+  color: white;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+
+/* NAVBER BACKGROUND */
+#navber::before {
+  content: ""; /*(content:"" is must for [:: before] and [::after] selector)*/
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute; /*(position is must for [:: before] and [::after] selector)*/
+  background-color: black;
+  z-index: -1; /*( for showing the iteam of navber in display)*/
+  opacity: 0.4;
+}
+#navber ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* SEARCH BOX */
+#search-box {
+  position: absolute;
+  right: 270px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #2f3640;
+}
+#search-box:hover {
+  border: 1px solid #6cfe96;
+}
+#search-box:hover > #search-txt {
+  width: 240px;
+}
+#search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  padding: 0;
+  float: left;
+  line-height: 30px;
+  width: 0;
+  transition: 0.7s;
+}
+#search-box:hover > #search-btn {
+  background-color: white;
+}
+#search-btn {
+  color: #e84118;
+  float: right;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #2f3640;
+  transition: 0.5s;
+}
+/*CART SECTION*/
+#cart {
+  position: absolute;
+  right: 200px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #2f3640;
+}
+.icon-btn {
+  color: #e84118;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#cart:hover {
+  border: 1px solid #6cfe96;
+}
+#cart:hover > .icon-btn {
+  background-color: white;
+}
+
+#account {
+  position: absolute;
+  right: 127px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #2f3640;
+}
+#account:hover {
+  border: 1px solid #6cfe96;
+}
+#account:hover > .icon-btn {
+  background-color: white;
+}
+#name {
+  position: absolute;
+  right: 580px;
+  color: #fbfcfd;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*HOME SECTION*/
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 200px;
+  height: 879px;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom: 2px solid red; */
+}
+
+/* BACKGROUND IMAGE */
+#home::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url("/image/bgp.jpg") no-repeat center center/cover;
+  z-index: -1;
+  opacity: 0.85;
+}
+
+#home h2 {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 3px 2px 3px black;
+  font-family: "Baloo Bhaina 2", cursive;
+  padding: 10px;
+  text-align: center;
+}
+#home h1 {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  color: #00b894;
+  text-shadow: 2px 2px 2px black, 1px 2px 2px red;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 4px;
+  text-align: center;
+}
+/*#home p{
+    font-size: 2rem;
+    margin:10px 10px 50px 10px;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 2px 1px black;
+    font-family: 'Grandstander', cursive;
+}*/
+
+/* OREDR & SIGHNUP */
+#order {
+  top: 35px;
+  position: relative;
+}
+#order a {
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #e5edeb;
+  color: black;
+  border-radius: 22px;
+  margin: 0px 26px;
+  padding: 1px 15px;
+  cursor: pointer;
+  border: 2px solid #6cfe96;
+  outline: none;
+  text-transform: uppercase;
+  font-family: "Baloo Bhaina 2", cursive;
+
+  transition: background-color 2s;
+}
+#order a:hover {
+  background-color: #00b894;
+}
+
+/* SERVICE SECTION */
+.service-container {
+  /* border: 3px solid blueviolet; */
+  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  height: 45vh;
+}
+
+#service {
+  display: flex;
+  margin: 9px;
+}
+#service .box {
+  border-radius: 8px;
+  padding: 4px 9px;
+  margin: 3px 10px;
+  background-color: #d4eae6f5;
+  box-shadow: 1px 3px 4px #121312;
+}
+#service .box img {
+  height: 100px;
+  margin: auto;
+  display: block;
+}
+#service p {
+  font-family: "Kufam", cursive;
+  word-spacing: 1px;
+}
+
+/* BOOK SECTION */
+.book-container {
+  /* border: 2px solid red; */
+  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  height: 45vh;
+  position: relative;
+  top: 1px;
+}
+#books {
+  display: flex;
+  margin: 3px;
+  padding: 3px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#books .booknamebox {
+  border: 3px solid #121312;
+  border-radius: 8px;
+  padding: 4px 9px;
+  margin: 4px 16px;
+  background-color: #f6fcf7;
+  box-shadow: 1px 2px 3px #010b18e3;
+}
+#books .booknamebox:hover {
+  transform: translateX(10px);
+  transition: transform 1s;
+}
+#books .booknamebox img {
+  width: 160px;
+  height: 180px;
+}
+#books .booknamebox p {
+  margin: 2px 0;
+  padding: 3px;
+  font-weight: bold;
+}
+#books .booknamebox .crt {
+  display: block;
+  margin: 2px 0;
+  border-radius: 5px;
+  padding: 3px;
+  position: relative;
+  left: 105px;
+  border: 1px solid red;
+}
+#books .booknamebox .crt:hover {
+  cursor: pointer;
+  background-color: rgb(238, 162, 134);
+}
+
+/* PUBLISHERS NAME */
+#publiser-container {
+  /* border: 2px solid green; */
+  position: relative;
+  top: 2px;
+  height: 36vh;
+}
+#publiser-container::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(rgba(96, 171, 204, 0.9), rgba(0, 0, 0, 0.9)),
+    url("/image/publisher/pub-back.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+#publisers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#publisers img {
+  height: 150px;
+}
+
+/* ABOUT US AND GALLARY */
+#about-and-gallery-container {
+  /* border: 2px solid black; */
+  position: relative;
+  top: 3px;
+  display: flex;
+  justify-content: space-around;
+  height: 67vh;
+}
+#about-block {
+  align-items: center;
+  /* border: 2px solid coral; */
+  width: 500px;
+}
+#about-block p {
+  /* color: white; */
+  /* text-shadow: 0.5px 0.5px 0.5px red; */
+  color: #0f2027;
+  font-size: 25px;
+  word-spacing: 5px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  font-family: "Special Elite", cursive;
+}
+#gallery-block {
+  /* border: 2px solid coral; */
+  width: 500px;
+}
+#gallery-block img {
+  width: 100px;
+  height: 100px;
+  margin: 11px 10px;
+  border: 1px solid #0e232c;
+  border-radius: 5px;
+}
+#gallery-block img:hover {
+  transform: scale(2.5);
+  transition: transform 2s;
+}
+#about-and-gallery-container::before {
+  content: "";
+  position: absolute;
+  background: url("/image/aboutGallery/about-back.jpg") no-repeat center
+    center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* CONTACT SECTION */
+#contact-container {
+  /* border: 2px solid red; */
+  position: relative;
+  top: 2px;
+}
+#contact-container::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/image/contact-back.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#contact-container #container h2 {
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-position: under;
+  color: rgb(238, 235, 235);
+  margin: 2px auto;
+  letter-spacing: 2px;
+  position: relative;
+  top: 13px;
+}
+#contact-container #container #fstp {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 25px auto;
+  color: #d3fffd;
+  letter-spacing: 3px;
+}
+#contact-box {
+  display: flex;
+  justify-content: space-around;
+  padding: 9px;
+}
+#contact {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  /* border: 2px solid green; */
+}
+#contact .box {
+  display: flex;
+  position: relative;
+  padding: 10px 0;
+}
+.box .icon {
+  min-width: 45px;
+  height: 45px;
+  margin: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 30px;
+}
+.box .icon i.fas {
+  color: #042a23;
+}
+#contact-container #container #contact-box #contact .text {
+  margin: 5px 7px 5px 2px;
+  color: white;
+  font-family: "Special Elite", cursive;
+}
+#contact-container #container #contact-box #contact .text h3 {
+  font-size: 1.8rem;
+  color: #00b894;
+}
+#contact-container #container #contact-box #contact .text p {
+  font-size: 1.2rem;
+}
+
+#message-form {
+  display: flex;
+  position: relative;
+  height: 70%;
+}
+#message-form form {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  width: 500px;
+}
+#message-form input,
+textarea {
+  padding: 10px;
+  margin: 15px;
+  font-size: 1rem;
+  border-radius: 12px;
+  outline: none;
+}
+#message-form input:focus,
+textarea:focus {
+  background: #e5edeb;
+}
+#message-form #send-btn {
+  font-size-adjust: 2rem;
+  padding: 13px;
+  margin: 14px;
+  border: 2px solid #6cfe96;
+  border-radius: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: #e5edeb;
+  color: black;
+  outline: none;
+  font-family: "Baloo Bhaina 2", cursive;
+  transition: background-color 1s;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.7);
+}
+#message-form #send-btn:hover {
+  cursor: pointer;
+  background-color: #00b894;
+}
+
+/* FOOTER SECTION  */
+footer {
+  background-color: black;
+  color: white;
+  position: relative;
+  top: 3px;
+}
+.top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #181f28;
+  height: 45vh;
+}
+.top h2 {
+  font-size: 30px;
+  font-family: "Merriweather", serif;
+  letter-spacing: 3px;
+}
+.border {
+  width: 108px;
+  height: 3px;
+  background: #ff5722;
+}
+.top p {
+  margin: 7px 12px;
+  letter-spacing: 2px;
+}
+#social-icon {
+  margin: 20px 0;
+  padding: 1px;
+  display: flex;
+}
+#social-icon a {
+  width: 40px;
+  height: 40px;
+  background-color: #a3a3a3;
+  border-radius: 50%;
+  line-height: 47px; /*for center the icon*/
+  margin: 2px 8px;
+}
+#social-icon .fab {
+  font-size: 21px;
+  position: relative;
+  left: 10px;
+  color: #fbc531;
+}
+#social-icon .fab:hover {
+  color: #e84118;
+}
+#last {
+  margin: 3px;
+  padding: 2px;
+  position: relative;
+  top: 16px;
+}
+#last input {
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  width: 260px;
+  height: 20px;
+  padding: 8px;
+  background-color: #cecaca;
+  font-weight: bold;
+  font-size: 14px;
+}
+#last #btn-last {
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  width: 95px;
+  height: 34px;
+  padding: 8px;
+  background-color: #e37c32;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 1s;
+}
+#last #btn-last:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+#link-item {
+  position: relative;
+  top: 9px;
+}
+#link-item ul {
+  list-style: none;
+  margin: 13px;
+}
+#link-item ul li {
+  border-bottom: 1px solid #5b5a58;
+  margin: 10px;
+  line-height: 20px;
+}
+#link-item ul li a {
+  text-decoration: none;
+  color: #edd5b0;
+  font-size: 18px;
+}
+#link-item ul li a:hover {
+  color: white;
+}
+#end {
+  margin: 1px;
+  padding: 4px;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  background-color: #01091af5;
+}

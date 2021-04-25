@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/ebook.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+
+    {{!-- sweetalert2 link --}}
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+
+
+
+    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+
+</head>
+
+<body>
+    {{>ebookNavber}}
+
+    <main id="main-container">
+        <div class="first-view">
+            <img src="image/eimage/Books.png" class="book">
+            <div class="main-text">
+                <h1>Read books online whenever, wherever you want</h1>
+                <span class="line-color"></span>
+                <p>We sell ebooks direct to consumers via TheKitabwala.com.
+                    We provide a range of ebook-specific technical services to book publishers
+                    Ebook section of Kitabwala is a popular ebook retailer with a reputation for innovation, integrity
+                    and independence.</p>
+                <button class="main-btn">READ MORE</button>
+            </div>
+        </div>
+    </main>
+    <div class="read">
+        <p>We sell ebooks direct to consumers via TheKitabwala.com.
+            We provide a range of ebook-specific technical services to book publishers
+            Ebook section of Kitabwala is a popular ebook retailer with a reputation for innovation, integrity and
+            independence. We sell ebooks direct to millions of consumers around the world, with five local sales portals
+            in the India, US, Canada, UK, Europe and Australia.
+
+            You can read our ebooks online, or download them to a vast array of devices, using our Ebook Reader apps.
+        </p>
+        <a href="#">
+            <ion-icon name="close-circle-outline" id="close"></ion-icon>
+        </a>
+
+    </div>
+
+
+    {{>pdfBooks}}
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="js/cart.js"></script>
+
+    {{!-- sweetalert2 script link --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+
+
+
+    <!-- USE JQUERY -->
+    <script>
+        $(document).ready(function () {
+            $('.main-btn').click(function () {
+                $('.read').show(500);
+            })
+
+            $('#close').click(function () {
+                $('.read').hide(500);
+            })
+        });
+    </script>
+</body>
+
+</html>

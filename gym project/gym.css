@@ -1,0 +1,122 @@
+/*css reset*/
+body{
+    margin: 0px;
+    padding: 0px;
+    background:url(gym1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Baloo Bhaina 2', cursive;
+    
+}
+.left{
+    color: white;
+    display: inline-block;
+    position: absolute;
+    left: 35px;
+    top: 18px;
+
+}
+.center{
+    color: white;
+    display: block;
+    margin: 20px auto;
+    width: 45%;
+}
+.right{
+    color: white;
+    display: inline-block;
+    position: absolute;
+    right: 35px;
+    top: 18px;
+}
+.navber{
+    display: inline-block ;
+    margin: 10px 39px;
+    padding: 5px 79px;
+}
+.navber li{
+    display: inline-block;
+    font-size: 30px;
+}
+.navber li a{
+    color: white;
+    text-decoration: none;
+    padding: 34px 75px;
+}
+.navber li a:hover , .navber li a.active{
+    text-decoration: underline;
+    color:greenyellow;
+}
+.left img{
+    filter:invert(100);
+}
+.btn{
+    margin: 2px 15px;
+    padding: 4px 10px;
+    color: white;
+    background-color: black;
+    border: 3px solid #6B4B29;
+    font-size: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+.btn:hover{
+    background-color: rgb(58, 56, 56);
+}
+.welcome {
+    color: white;
+    margin: 0 auto;
+    padding: 5px 13px;
+    width: 45%;
+}
+#wel{
+    color: #ADB621;
+    text-shadow: #6B4B29;
+}
+p{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 80px;
+}
+.container {
+        border: 3px solid goldenrod;
+        width: 25%;
+        margin: 34px 85px;
+        padding: 36px 66px;
+        color: white;;
+        border-radius: 19px;
+}
+.group input {
+    text-align: center;
+    display: block;
+    padding: 13px 113px;
+    margin: 6px auto;
+    width: 30%;
+    border: 1px solid gold;
+    font-size: 29px;
+    border-radius: 20px;
+}
+.container h2{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Baloo Bhaina 2', cursive;
+
+}
+.container button {
+    margin: 24px auto;
+    width: 57%;
+    border: 1px solid gold;
+    border-radius: 23px;
+    display: block;
+    padding: 2px 25px;
+    font-size: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#s{
+    color: coral;
+    font-weight: bold;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="/css/account.css">
+</head>
+
+<body>
+
+    <div class="account">
+        {{#if message}}
+        <div class="alert">
+            {{message}}
+        </div>
+        {{/if}}
+        <div class="form-box">
+            <div class="button-top">
+                <div id="btn"></div>
+                <button type="button" class="toogle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toogle-btn" onclick="sighnup()">Sign Up</button>
+            </div>
+
+            <div class="social-icon">
+                <img src="/image/account/fb.png">
+                <img src="/image/account/tw.png">
+                <img src="/image/account/gp.png">
+            </div>
+
+            <form id="log-in" class="input-box" action="/auth/login" method="POST">
+                <input type="text" name="email" class="input-field" placeholder="User Id/Email" required>
+                <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="input-field-check" id="remeber-pass" name="remember" value="">
+                <lable for="remember-pass">Remember Password</lable>
+                <a href="#">Forget Your Password?</a>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+
+            <form id="sighn-up" class="input-box" action="/auth/register" method="POST">
+                <input type="text" name="fname" class="input-field" placeholder="Enter Full Name" required>
+                <input type="email" name="email" class="input-field" placeholder="Enter E-mail Id" required>
+                <input type="tel" name="mobile_no" class="input-field" placeholder="Enter Mobile No." required>
+                <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
+                <input type="password" name="cpassword" class="input-field" placeholder="Re-Enter Password" required>
+                <input type="checkbox" class="input-field-check" id="remeber-pass" name="remember" value="">
+                <lable for="remember-pass">I agree to the terms & conditions.</lable>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script>
+        var x = document.getElementById("log-in");
+        var y = document.getElementById("sighn-up");
+        var z = document.getElementById("btn");
+
+        function sighnup() {
+            window.history.pushState(null, { title: 'sighn_up' }, 'sighn_up');
+            x.style.left = "-450px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login() {
+            window.history.pushState(null, { title: 'login' }, 'login');
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+    </script>
+</body>
+
+</html>

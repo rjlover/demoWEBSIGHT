@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Sign up page
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html{
+        font-size: 16px;
+      }
+      body{background-image: url(sighnup.jpg);
+        background-attachment: fixed;
+        background-size:100% 100%;
+        background-repeat:no-repeat;
+        font-size: 0.9rem}
+      .mydiv{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      fieldset {
+        background-color:rgba(0, 0, 0, 0.7);
+        border: none;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        padding: .5rem;
+      }
+      input:focus {
+        background:grey;
+      }
+      p, h1, h3, label {
+        color: rgb(206, 243, 73);
+        font-size: medium;
+      }
+      input[type="submit"] {
+        background: seagreen;
+        border: none;
+        border-radius: .5rem;
+        letter-spacing: .5rem;
+        text-transform: uppercase;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.7);
+        transition: all 0.5s;
+      }
+      input[type="submit"]:hover {
+        background: coral;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mydiv">
+    <fieldset>
+      <h3><b>SIGN UP AND START HAVING FUN</b></h3>
+      <form action="maintaince.html" method="GET" autocomplete="off" target="-self">
+        <input type="text" name="fname" placeholder="First Name" required>
+        <br>
+        <br>
+        <input type="text" name="lname" placeholder="Last name"required>
+        <br><br>
+        <input type="email" name="mail" placeholder="Register email-id" required>
+        <br>
+        <br>
+        <input type="number" name="mobno" placeholder="mobile number" required>
+        <br><br>
+        <input type="text" name="uname" placeholder="Username" required>
+        <br><br>
+        <input type="password" name="pswrd" placeholder="New Password" required>
+        <br>
+        <div>
+          <p><b>Select Gender:</b></p>
+          <input type="radio" id="male" name="Gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="Gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="Gender" value="other">
+          <label for="other">Others</label>
+        </div>
+        <p><b>Date Of Birth:</b></p>
+        <input type="date" name="dob" required>
+        <br>
+        <input type="submit" value="Sign Up">
+      
+      </form>
+    </fieldset>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/bookhome.css">
+    {{!-- for div animation --}}
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    {{!-- sweetalert2 link --}}
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+
+    {{>headerlink}}
+</head>
+
+<body>
+    {{>navber}}
+
+    <section data-aos="fade" id="home">
+        <h2 class="animate__animated animate__backInDown">Welcome to India's finest online bookstore</h2>
+        <h1 class="animate__animated animate__heartBeat animate__delay-2s animate__infinite animate__slower">
+            'Buy Now! 30% off for Students'</h1>
+        <!-- <p class="animate__animated animate__backInRight">"A wide range of books to meet any test and budget"</p> -->
+        <div id="order">
+            <a href="#">Order Now</a>
+            <a href="/account/login">Sign &nbsp Up</a>
+        </div>
+    </section>
+
+    {{>service}}
+
+    {{>publisher}}
+
+    {{>bestsellbook}}
+
+    {{>aboutGallery}}
+
+    {{>contact}}
+
+    {{>footer}}
+
+    {{!-- //for div animation --}}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    {{!-- sweetalert2 script link --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+        //for div animation
+        AOS.init({
+            offset: 250,
+            duration: 1000,
+        }
+        );
+
+        function formSubmit() {
+            swal.fire("Thanks for contact");
+        }
+    </script>
+</body>
+
+</html>

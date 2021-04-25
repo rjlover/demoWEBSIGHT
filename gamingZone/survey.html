@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey</title>
+    <style>
+        fieldset{
+            background-color: darkturquoise;
+        }
+        input[type="submit"]:hover {
+        background: coral;
+        cursor: pointer;
+        }
+        input[type="reset"]:hover {
+        background: coral;
+        cursor: pointer;
+        }
+        p,label{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body style="background-color: darkturquoise;">
+   <fieldset>
+       <legend style="font-size: 30px;"><b>SURVEY FORM</b></legend>
+       <form action="" method="" autocomplete="off">
+
+           <label for="name">Your Full Name:</label>
+           <input type="text" id="name" name="name"> 
+
+           <lable for="age">Your Age:</lable>
+           <input type="number" id="age" name="age" min="9" max="100"><br><br>
+
+           <label for="country">Where are you from?</label>
+           <select id="country" name="cname">
+               <option value="Eourope">Eourope</option>
+               <option value="Africa">Africa</option>
+               <option value="Asia" selected>Asia</option>
+               <option value="America">America</option>
+               <option value="Australia">Australia</option>
+           </select>
+
+           <p><b>Which of the following best describes you?</b></p>
+           <input type="radio" id="a" name="describe" value="">
+           <lable for="a">I love whole gaming world, i consider muyself a gammer and willing to spend on system and games</lable><br>
+           <input type="radio" id="b" name="describe" value="">
+           <label for="b">i am a game enthusiast:play often,love the story and getting totally immersed in specific games</label><br>
+           <input type="radio" id="c" name="describe" value="">
+            <label for="c">I am a gamer for exercise: I use my system primarilly for exercise,but also to play with friends/family</label><br>
+            <input type="radio" id="d" name="describe" value="">
+            <lable for="d">PC gamer:I play primarilly on my computer,with minimal spending on system and games</lable><br>
+            <input type="radio" id="e" name="describe" value="">
+            <label for="e">Mobile gamer: I play primarilly on mobile,but may play on computer or console occasionally,with minimal spending on system and games</label><br>
+            <input type="radio" id="f" name="describe" value="">
+            <label for="f">I play almost any game ,any time:will generally play on any system and play games often,may own multiple console.</label><br>
+            <input type="radio" id="g" name="describe" value="">
+            <label for="g">I am pretty average: I paly often,but not alltime and an average spending on system and games</label><br>
+
+            <p><b>How often do you play games on your smartphones/tablet?</b></p>
+            <input type="radio" id="h" name="platfrom" value="">
+            <label for="h">never</label><br>
+            <input type="radio" id="i" name="platfrom" value="">
+            <label for="i">rarely(can't remember the last time)</label><br>
+            <input type="radio" id="j" name="platfrom" value="">
+            <label for="j">sometimes(not regularly)</label><br>
+            <input type="radio" id="k" name="platfrom" value="">
+            <label for="k">often(weekly)</label><br>
+            <input type="radio" id="l" name="platfrom" value="">
+            <label for="l">daily</label><br>
+
+            <p><b>What game genre do you play on your smartphone/tablet?</b></p>
+            <input type="checkbox" id="a" name="genre" value="Action">
+            <lable for="a">Action</lable>
+            <input type="checkbox" id="b" name="genre" value="Adventure">
+            <label for="b">Adventure</label>
+            <input type="checkbox" id="c" name="genre" value="Card">
+            <lable for="c">Card</lable>
+            <input type="checkbox" id="d" name="genre" value="RPG">
+            <label for="d">RPG</label>
+            <input type="checkbox" id="e" name="genre" value="Sports">
+            <label for="e">Sports</label>
+            <input type="checkbox" id="f" name="genre" value="Strategy">
+            <label for="f">Strategy</label>
+            <input type="checkbox" id="g" name="genre" value="OthersS">
+            <label for="g">Others(please specify)</label>
+            <input type="text" id="g" name="genre"><br>
+
+            <p><b>Playing video games gives me..</b></p>
+            <input type="checkbox" id="h" name="reason" value="">
+            <label for="h">Social skills</label>
+            <input type="checkbox" id="i" name="reason" value="">
+            <label for="i">Stress Relief</label>
+            <input type="checkbox" id="j" name="reason" value="">
+            <label for="j">Hand eye coordination</label>
+            <input type="checkbox" id="k" name="reason" value="">
+            <label for="k">Adrenaline rush</label>
+            <input type="checkbox" id="l" name="reason" value="">
+            <label for="l">A palce to escape</label><br>
+
+            <p><b>Do your parents supervise your gameplay?</b></p>
+            <input type="radio" id="ma" name="supervise" value="">
+            <label for="ma">Not at all</label>
+            <input type="radio" id="ba" name="supervise" value="">
+            <label for="ba">A little</label>
+            <input type="radio" id="da" name="supervise" value="">
+            <label for="da">A lot</label><br>
+
+            <p><b>Has playing video game negatively affected your health or sleep habits?</b></p>
+            <input type="radio" id="maa" name="sleep" value="">
+            <label for="maa">Not at all</label>
+            <input type="radio" id="baa" name="sleep" value="">
+            <label for="ba">A little</label>
+            <input type="radio" id="daa" name="sleep" value="">
+            <label for="daa">A lot</label><br>
+
+            <p><b>Do you play online games?</b></p>
+            <input type="radio" id="maaa" name="online" value="">
+            <label for="maaa">Not at all</label>
+            <input type="radio" id="baaa" name="online" value="">
+            <label for="baaa">A little</label>
+            <input type="radio" id="daaa" name="online" value="">
+            <label for="daaa">A lot</label><br>
+
+            <p><b>How do you prefer to aquire video games?</b></p>
+            <input type="checkbox" id="ha" name="prefer" value="">
+            <label for="ha">I borrow games</label>
+            <input type="checkbox" id="ia" name="prefer" value="">
+            <label for="ia">I buy games from shop</label>
+            <input type="checkbox" id="ja" name="prefer" value="">
+            <label for="ja">I download games</label>
+            <input type="checkbox" id="ka" name="prefer" value="">
+            <label for="ka">I rent games from a games club</label><br>
+
+            <P><B>Write something about cloud gaming service:</B></P>
+            <textarea rows="10" cols="50"></textarea><br>
+
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+
+
+
+
+        </form>
+   </fieldset> 
+</body>
+</html>

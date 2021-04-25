@@ -1,0 +1,39 @@
+<nav id="navber">
+    <div id="logo">
+        <img src="image/wixkitab2-removebg-preview.png" alt="logo">
+    </div>
+
+    <ul>
+        <li class="iteam"><a href="/">Home</a></li>
+        <li class="iteam"><a href="/bookshelfhome">Bookshelf</a></li>
+        <li class="iteam"><a href="./ebook">E-books</a></li>
+        <li class="iteam"><a href="#about-and-gallery-container">About Us</a></li>
+        <li class="iteam"><a href="#contact-container">Contact us</a></li>
+    </ul>
+    {{#if message}}
+    <div id="name">
+        <h1>{{message}}</h1>
+    </div>
+    {{/if}}
+
+    <div id="cart">
+        <a class="icon-btn" href="#">
+            <i class="fas fa-cart-plus"></i>
+        </a>
+    </div>
+
+    <div id="account">
+        <a class="icon-btn" href="/account/login">
+            <i class="fas fa-user-alt"></i>
+        </a>
+    </div>
+
+
+    <div id=search-box>
+        <input id="search-txt" type="text" placeholder="Find the book">
+        <a id="search-btn" href="https://www.google.com">
+            <i class="fas fa-search"></i>
+        </a>
+
+    </div>
+</nav>

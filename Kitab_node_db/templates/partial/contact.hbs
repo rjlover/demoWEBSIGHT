@@ -1,0 +1,61 @@
+<section data-aos="zoom-in" id="contact-container">
+    <div id="container">
+        <h2>CONTACT US</h2>
+        <p id="fstp">Get In Touch With Us</p>
+        <div data-aos="fade-up" id="contact-box">
+            <div id="contact">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>2130 Fulton Street,
+                            The Kitabwala building,
+                            kolkata,700032,India</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-phone-square-alt"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Phones</h3>
+                        <p>+91-8967543780/0345-785656</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="text">
+                        <h3>E-mail</h3>
+                        <p>thekitabwala@book.com</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Opening Hours</h3>
+                        <p>Mon-Sat: 9.00AM-7.00PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" id="message-form">
+                <form action="/auth/contactUs" method="POST">
+                    <input type="text" name="name" placeholder="Enter your full name" required>
+                    <input type="email" name="mail" placeholder="Enter your Email ID." required>
+                    <input type="phone" name="mobile" placeholder="Enter your Mobile Number" required>
+                    <textarea name="message" placeholder="Message" rows="5" cols="5" required></textarea>
+                    <button onclick="formSubmit()" type="submit" id="send-btn">Send Message</button>
+                </form>
+                {{#if alert}}
+                <p>{{alert}}</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

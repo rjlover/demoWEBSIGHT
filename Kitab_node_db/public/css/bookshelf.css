@@ -1,0 +1,411 @@
+body {
+  background: url("/image/Bookshelf/download.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right bottom, left top;
+}/* NAVIGATION BAR */
+#navber {
+  display: flex;
+  align-items: center;
+  position: relative; /* (to avoid overlapping of background color[ #navber::before] ) */
+  top: -8px;
+  margin-left: -10px;
+}
+
+/* LOGO and IMAGE */
+#logo {
+  margin: 7px 27px;
+}
+#logo img {
+  margin: 4px 3px;
+  height: 56px;
+}
+
+/* LIST STYLE */
+#navber ul {
+  display: flex;
+}
+#navber ul li {
+  list-style: none;
+  color: white;
+  font-size: 1.3rem;
+}
+#navber ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 3px 20px;
+  border-radius: 8px;
+  color: white;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+#navber::before {
+  content: ""; /*(content:"" is must for [:: before] and [::after] selector)*/
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute; /*(position is must for [:: before] and [::after] selector)*/
+  background-color: black;
+  z-index: -1; /*( for showing the iteam of navber in display)*/
+  opacity: 0.4;
+}
+#navber ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* SEARCH BOX */
+#search-box {
+  position: absolute;
+  right: 270px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #2f3640;
+}
+#search-box:hover {
+  border: 1px solid #6cfe96;
+}
+#search-box:hover > #search-txt {
+  width: 240px;
+}
+#search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  padding: 0;
+  float: left;
+  line-height: 30px;
+  width: 0;
+  transition: 0.7s;
+}
+#search-box:hover > #search-btn {
+  background-color: white;
+}
+#search-btn {
+  color: #e84118;
+  float: right;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #2f3640;
+  transition: 0.5s;
+}
+/*CART SECTION*/
+#cart {
+  position: absolute;
+  right: 200px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #2f3640;
+}
+.icon-btn {
+  color: #e84118;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#cart:hover {
+  border: 1px solid #6cfe96;
+}
+#cart:hover > .icon-btn {
+  background-color: white;
+}
+
+#account {
+  position: absolute;
+  right: 127px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #2f3640;
+}
+#account:hover {
+  border: 1px solid #6cfe96;
+}
+#account:hover > .icon-btn {
+  background-color: white;
+}
+
+/* Side navigation bar */
+.sidenav {
+  position: fixed;
+  display: inline-block;
+  margin-top: -4px;
+  margin-left: -6px;
+  padding: 3px;
+  height: 80%;
+  width: 19vw;
+  background: rgba(32, 32, 32, 0.8);
+  border-radius: 50px;
+  font-weight: bold;
+  font-family: "Fondamento", cursive;
+}
+.sidenav ul i{
+  color: rgb(248, 157, 52);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.cats {
+  color: aliceblue;
+  text-align: left;
+  font-size: 20px;
+}
+
+.sidenav li[class="genre"] {
+  list-style: none;
+  border-bottom: 0.5px solid grey;
+  height: 30px;
+}
+.sidenav li a {
+  list-style: none;
+  text-decoration: none;
+  padding: 3px 22px;
+  color: white;
+}
+.sidenav li a:visited {
+  color: aliceblue;
+}
+.sidenav li a:hover {
+  cursor: pointer;
+  color: black;
+  background-color: bisque;
+  border-radius: 20px;
+}
+
+.orders {
+  color: aliceblue;
+  font-size: 22px;
+}
+.orders li {
+  list-style: none;
+}
+
+/* bestseller novels */
+.novelofm {
+  text-align: center;
+  display: list-item; /* for the style of the headings */
+  justify-content: right;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Fondamento", cursive;
+  color: blanchedalmond;
+  background-color: #2f3640;
+  border-radius: 60px;
+  list-style: none;
+  margin-left: 410px;
+  /* padding: 0px; */
+  width: 940px;
+  word-spacing: 6px;
+}
+#novwala {
+  display: flex;
+  height: 410px;
+  float: right;
+}
+.novbooks {
+  margin: 27px 38px;
+  padding: 35px;
+  background: rgba(32, 32, 32, 0.8);
+  box-shadow: 8px 10px 5px #010b18e3;
+  border-radius: 40px;
+}
+#novwala p {
+  color: darkkhaki;
+  font-weight: bold;
+}
+.novbooks:hover {
+  transform: translateX(20px) translateY(5px);
+  transition: transform 1s;
+}
+/* add to cart buttons */
+.crt {
+  float: right;
+  background-color: peru;
+  border-radius: 12px;
+  font-family: "Baloo Bhaina 2", cursive;
+  font-weight: bold;
+}
+.crt:hover {
+  color: wheat;
+  background-color: green;
+  cursor: pointer;
+}
+/* bestseller thrillers */
+.throfm {
+  text-align: center;
+  display: list-item;
+  justify-content: right;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Fondamento", cursive;
+  color: blanchedalmond;
+  background-color: #2f3640;
+  border-radius: 60px;
+  list-style: none;
+  margin-left: 410px;
+  /* padding: 0px; */
+  width: 940px;
+}
+.thrb {
+  margin-top: 490px;
+}
+#thrwala {
+  display: flex;
+  float: right;
+  height: 410px;
+}
+.thrbooks {
+  margin: 27px 38px;
+  padding: 35px;
+  background: rgba(32, 32, 32, 0.8);
+  box-shadow: 8px 10px 5px #010b18e3;
+  border-radius: 40px;
+}
+#thrwala p {
+  color: darkkhaki;
+  font-weight: bold;
+}
+.thrbooks:hover {
+  transform: translateX(20px) translateY(5px);
+  transition: transform 1s;
+}
+
+/* bestseller adventures */
+.adofm {
+  text-align: center;
+  display: list-item;
+  justify-content: right;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Fondamento", cursive;
+  color: blanchedalmond;
+  background-color: #2f3640;
+  border-radius: 60px;
+  list-style: none;
+  margin-left: 410px;
+  /* padding: 0px; */
+  width: 940px;
+}
+.adventb {
+  margin-top: 490px;
+}
+#advwala {
+  display: flex;
+  float: right;
+  height: 410px;
+}
+.advbooks {
+  margin: 22px 38px;
+  padding: 35px;
+  background: rgba(32, 32, 32, 0.8);
+  box-shadow: 8px 10px 5px #010b18e3;
+  border-radius: 40px;
+}
+#advwala p {
+  color: darkkhaki;
+  font-weight: bold;
+}
+.advbooks:hover {
+  transform: translateX(20px) translateY(5px);
+  transition: transform 1s;
+}
+/* bestseller biographies */
+
+.biob {
+  margin-top: 490px;
+}
+.biofm {
+  text-align: center;
+  display: list-item;
+  justify-content: right;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Fondamento", cursive;
+  color: blanchedalmond;
+  background-color: #2f3640;
+  border-radius: 60px;
+  list-style: none;
+  margin-left: 410px;
+  /* padding: 0px; */
+  width: 940px;
+}
+#biowala {
+  display: flex;
+  float: right;
+  height: 410px;
+}
+.biobooks {
+  margin: 22px 38px;
+  padding: 35px;
+  background: rgba(32, 32, 32, 0.8);
+  box-shadow: 8px 10px 5px #010b18e3;
+  border-radius: 40px;
+}
+#biowala p {
+  color: darkkhaki;
+  font-weight: bold;
+}
+.biobooks:hover {
+  transform: translateX(20px) translateY(5px);
+  transition: transform 1s;
+}
+
+/* bestseller school,college books */
+.colschofm {
+  text-align: center;
+  display: list-item;
+  justify-content: right;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Fondamento", cursive;
+  color: blanchedalmond;
+  background-color: #2f3640;
+  border-radius: 60px;
+  list-style: none;
+  margin-left: 410px;
+  /* padding: 0px; */
+  width: 940px;
+}
+
+.colsch {
+  margin-top: 490px;
+}
+#cosowala {
+  display: flex;
+  float: right;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-height: 410px;
+  width: 1505px;
+}
+.coschbooks {
+  margin: 27px 29px;
+  padding: 35px;
+  background: rgba(32, 32, 32, 0.8);
+  box-shadow: 8px 10px 5px #010b18e3;
+  border-radius: 40px;
+  height: 280px;
+  margin-right: 57px;
+}
+#cosowala p {
+  color: darkkhaki;
+  font-weight: bold;
+}
+.coschbooks:hover {
+  transform: translateX(20px) translateY(5px);
+  transition: transform 1s;
+}

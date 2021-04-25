@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/ebook.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {{>ebookNavber}}
+
+    <div class="product-container">
+        <div class="product-header">
+            <h5 class="product-title">ITEM'S NAME</h5>
+            <h5 class="price">PRICE</h5>
+            <h5 class="quantity">QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
+        </div>
+
+        <div class="product">
+
+        </div>
+        <div class="pay-btn">
+            <a href="#" onclick="memef()">PAY NOW</a>
+        </div>
+
+        <div class="meme">
+            <img src="/image/eimage/meme.jpg">
+            <div class="pay-btn1">
+                <a href="#">CONTINUE</a>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        <script src="/js/cart.js"></script>
+        <script>
+            function memef() {
+                document.querySelector('.meme').style.opacity = 1;
+
+            }
+        </script>
+</body>

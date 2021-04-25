@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bookshelf | The Kitabwala </title>
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/44272ad86b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/thriller.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"
+        integrity="sha512-Pa4Jto+LuCGBHy2/POQEbTh0reuoiEXQWXGn8S7aRlhcwpVkO8+4uoZVSOqUjdCsE+77oygfu2Tl+7qGHGIWsw=="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/turn.js"></script>
+</head>
+
+<body>
+    {{>navber}}
+
+
+    {{>sidenavBookshelf}}
+
+
+    {{>thillerBooks}}
+
+    </div>
+    <div class="hard">
+        <p id=arrow>Thrillers
+            <i class="fa fa-arrow-circle-right"></i>
+        </p>
+
+    </div>
+    <script>
+        jQuery(document).ready(function () {
+            $('.thriller').turn({
+                //display: 'double',
+                width: 1150,
+                height: 600,
+                acceleration: true,
+                gradients: !$.isTouch,
+                duration: 1000,
+                elevation: 20,
+                //page: 1,
+                autoCenter: true,
+
+
+                // when: {
+                //  	turned: function(e, page) {
+                //  		console.log('Current view: ', $(this).turn('view'));
+                //  	}
+                //  }
+            })
+        });
+    </script>
+
+
+</body>
+
+</html>
