@@ -1,2 +1,2 @@
 # demoWEBSIGHT
-Try to design some websight 
+Try to design some website
